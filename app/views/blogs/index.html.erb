@@ -1,0 +1,16 @@
+<div class="blog-container">
+
+<% if @blogs.length == 0 %>
+    <div>No blogs yet !</div>
+<% else %>
+    <% @blogs.each do |blog| %>
+        <div class="blog-article">
+            <h2 class="blog-title"><%= blog.title%></h2>
+            <p class="blog-author">By <%= blog.author %></p>
+            <p class="blog-content"><%= blog.content[0, 100] %></p>
+            <a class="btn btn-info" href="<%= blogs_path + "/" + blog.id.to_s %>">See more</a>
+        </div>
+    <% end %>
+<% end %>
+
+</div>

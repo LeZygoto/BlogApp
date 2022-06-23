@@ -10,6 +10,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav>
+      <ul>
+        <li><a href="<%= blogs_path %>">Blogs</a></li>
+        <li><a href="<%= new_blog_path %>">Create</a></li>
+      </ul>
+    </nav>
+    <div id="main">
+      <%= yield %>
+    </div>
   </body>
 </html>
